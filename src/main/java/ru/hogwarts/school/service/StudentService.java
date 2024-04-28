@@ -26,4 +26,8 @@ public interface StudentService {
     double getAvgAge();
 
     List<Student> getLastFiveOrderByIdDesc();
+
+    List<String> getAllNamesStartWithA();
+
+    double getAvgAgeWithStream();
 }

@@ -47,4 +47,11 @@ public class FacultyServiceImpl implements FacultyService {
         logger.info("findByColorIgnoreCaseOrNameIgnoreCase method was invoked");
         return facultyRepository.findByColorIgnoreCaseOrNameIgnoreCase(color, name);
     }
+
+    public String getLongestName() {
+        return facultyRepository.findAll().stream()
+                .map(Faculty::getName)
+                .max((name1, name2) -> name1.length() - name2.length())
+                .get();
+    }
 }
