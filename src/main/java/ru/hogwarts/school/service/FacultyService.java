@@ -16,4 +16,5 @@ public interface FacultyService {
 
     Collection<Faculty> findByColorIgnoreCaseOrNameIgnoreCase (String color, String name);
 
+    String getLongestName();
 }
